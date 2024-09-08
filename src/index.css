@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root{
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+  --success: rgb(157, 237, 157);
+}
+
+/* base styles & title */
+body{
+  font-family: "Noto Serif";
+  color: var(--secondary);
+}
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1{
+  color: var(--primary);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.title h2, .title p{
+  text-align: center;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+/* upload form styles */
+.progress-bar{
+  height: 5px;
+  background: var(--success);
+  margin-top: 20px;
+}
+
+
+/* progress bar styles */
+
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Repeat 3 columns of equal width */
+  grid-gap: 20px; /* Adjust grid gap as needed */
+}
+
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 75%; /* Aspect ratio of 4:3, adjust as needed */
+}
+
+.img-wrap img {
+  width: 100%; /* Ensure the image takes full width of the container */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* modal styles */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full screen width */
+  height: 100%; /* Full screen height */
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensures the backdrop stays above other elements */
+}
+
+.backdrop-img {
+  max-width: 85%;
+  max-height: 65%;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  /* border: 3px solid white; */
+  object-fit: contain; /* Makes sure the image scales properly */
+  opacity:0.8;
+}
